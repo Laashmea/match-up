@@ -1,3 +1,8 @@
-<p>
-  create works!
-</p>
+<form>
+  <h1>Create Match</h1> <br/>
+  <h3>Name of Tournament</h3><br/>
+  <input class="form-control" type="text" placeholder="Tournament Name" [(ngModel)]="tournamentText"><br/>
+  <h3>Date of Tournament</h3>
+  <dl-date-time-picker class="datepicker"></dl-date-time-picker>
+  <button class="btn btn-lg btn-primary" (click)="createTournament()">View</button>
+</form>
