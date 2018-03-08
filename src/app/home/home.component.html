@@ -1,0 +1,47 @@
+<div class="home">
+  <div class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="text-center"><span style="color:red">Mat</span><span style="color:white">c</span><span style="color:blue">hed</span></h1>
+      </div>
+    </div>
+  </div>
+  <div class="current-games">
+    <div class="container-fluid">
+      <h2>Matches</h2>
+      <div class="row card-group">
+          <div class="col-4"  *ngFor="let current_game of current_games">
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{current_game}}</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+      <div class="join-match">
+      <div class="container-fluid">
+      <h2 id="matches">Join a Tournament</h2>
+      <div class="row card-group">
+          <div class="col-4"  *ngFor="let game of games">
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{game}}</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Join</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+        <h2 id="matches">Create New Tournament</h2>
+        <div class="button-container text-center">
+          <button class="btn btn-primary" (click)="createTournamentClick()">Create!</button>
+        </div>
+      </div>
+  </div>
+</div>
