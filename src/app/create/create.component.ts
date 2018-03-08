@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class CreateComponent implements OnInit {
 
   tournaments: any;
-  tournamentText: string = "test";
+  tournText: string = "test";
 
   constructor(private router: Router, private _data: DataService) { }    
 
@@ -19,8 +19,8 @@ export class CreateComponent implements OnInit {
   }
 
   createTournament() {
-    this.tournaments.push(this.tournamentText);
-    this.tournamentText = "";
+    this.tournaments.push(this.tournText);
+    this.tournText = '';
     this._data.changeGoal(this.tournaments);
     this.router.navigate(['']);
   }
