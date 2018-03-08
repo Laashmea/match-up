@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,8 @@ export class HomeComponent implements OnInit {
     this._data.avail_match.subscribe(res => this.avail_matches = res);
     this._data.changeAvailMatch(this.avail_matches);
   }
+  
+
 
   createTournamentClick() {
     this.router.navigate(['create']);
