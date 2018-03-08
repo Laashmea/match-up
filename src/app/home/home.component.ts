@@ -8,14 +8,16 @@ import { DataService } from '../data.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  current_games = [];
-  games = ["Game11", "Game21", "Game31"];
+  current_matches = [];
+  avail_matches = [];
   
   constructor(private router: Router, private _data: DataService) { }
   
   ngOnInit() {
-    this._data.tournament.subscribe(res => this.current_games = res);
-    this._data.changeGoal(this.current_games);
+    this._data.current_match.subscribe(res => this.current_matches = res);
+    this._data.changeCurrentMatch(this.current_matches);
+    this._data.avail_match.subscribe(res => this.avail_matches = res);
+    this._data.changeAvailMatch(this.avail_matches);
   }
 
   createTournamentClick() {

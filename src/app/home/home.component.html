@@ -10,11 +10,14 @@
     <div class="container-fluid">
       <h2>Matches</h2>
       <div class="row card-group">
-          <div class="col-4"  *ngFor="let current_game of current_games">
+          <div class="col-4"  *ngFor="let current_match of current_matches">
               <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">{{current_game}}</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <h5 class="card-title"> <strong>{{current_match.title}}</strong></h5>
+                    <p class="card-text"><strong>Host: </strong>{{ current_match.host }}</p>
+                    <p class="card-text"><strong>Teams: </strong>{{ current_match.teams }}</p>
+                    <p class="card-text"><strong>Date: </strong>{{ current_match.date }}</p>
+                    <p class="card-text"><strong>Details: </strong>{{ current_match.details }}</p>
                     <div class="button-container">
                       <button class="btn btn-primary" (click)="viewTournamentClick()">View</button>
                     </div>
@@ -28,11 +31,14 @@
       <div class="container-fluid">
       <h2 id="matches">Join a Tournament</h2>
       <div class="row card-group">
-          <div class="col-4"  *ngFor="let game of games">
+          <div class="col-4"  *ngFor="let avail_match of avail_matches">
               <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">{{game}}</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h5 class="card-title"> <strong>{{avail_match.title}}</strong></h5>
+                      <p class="card-text"><strong>Host: </strong>{{ avail_match.host }}</p>
+                      <p class="card-text"><strong>Teams: </strong>{{ avail_match.teams }}</p>
+                      <p class="card-text"><strong>Date: </strong>{{ avail_match.date }}</p>
+                      <p class="card-text"><strong>Details: </strong>{{ avail_match.details }}</p>
                     <a href="#" class="btn btn-primary">Join</a>
                   </div>
               </div>
