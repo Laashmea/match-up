@@ -7,7 +7,7 @@ export class DataService {
     {
       title: "Tournament 1",
       host: "d{ }",
-      teams: ["d{ }", "TR"],
+      teams: ["d{ } in RR", "TR Big Data"],
       date: "Fri Mar 09 2018 1:00:00 GMT-0500 (EST)",
       details: "Match is at 5pm! Hope to see you all there!"
     }
@@ -16,7 +16,7 @@ export class DataService {
     {
       title: "Tournament",
       host: "d{ }",
-      teams: ["d{ }", "TR"],
+      teams: ["d{ } in RR", "TR Big Data"],
       date: "Mon Mar 12 2018 11:30:00 GMT-0500 (EST)",
       details: "Match is at 4pm! Be there or be square!"
     }
