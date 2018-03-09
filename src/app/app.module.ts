@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { DataService } from './data.service';
 import { AppRoutingModule } from './app-routing.module';
-
+import * as $ from "jquery";
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';

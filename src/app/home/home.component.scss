@@ -1,8 +1,16 @@
 .hero {
-    background: url('assets/foosball.png');
+    background: url('assets/Leslie.png');
     background-size: cover;
-    padding: 5rem 0 30rem 0;
+    background-position: center; 
+    padding: 0 0 826px 0;
+   
+    min-height:100%;
+    background-attachment: fixed;
 }
+
+
+
+
 
 .card-group {
     padding: 0rem 2rem;
