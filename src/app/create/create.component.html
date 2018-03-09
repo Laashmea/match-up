@@ -1,65 +1,67 @@
-<form>
-  <h1>Create Match</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <strong>Match Name:</strong>
-      </div>
-      <div class="col-md-8">
-          <input type="text" name="matchname" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="matchName">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-          <strong>Host Name:</strong>
-      </div>
-      <div class="col-md-8">
-        <input type="text" name="hostname" class="txt form-control input-lg col-md-6" placeholder="" [(ngModel)]="hostName">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-          <strong>Date of Match:</strong>
-      </div>
-      <div class="col-md-8">
-          <input name="matchdate" class="form-control col-md-6" [owlDateTime]="date" [owlDateTimeTrigger]="date" [(ngModel)]="matchDate">
-          <owl-date-time #date></owl-date-time>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-          <strong>Details:</strong>
-      </div>
-      <div class="col-md-8">
-          <textarea type="text" name="details" class="txt input-lg form-control" [(ngModel)]="details"></textarea>
-      </div>
-    </div>  
-    <div class="row">
+<div class="nav-padding">  
+  <form>
+    <h1>Create Match</h1>
+    <div class="container">
+      <div class="row">
         <div class="col-md-4">
-          <strong>Team Name:</strong>
+          <strong>Match Name:</strong>
         </div>
         <div class="col-md-8">
-            <input type="text" name="teamname" class="txt form-control input-lg col-lg-6" placeholder="" [(ngModel)]="teamName">
+            <input type="text" name="matchname" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="matchName">
         </div>
       </div>
       <div class="row">
-          <div class="col-md-4">
-            <strong>Teammate 1:</strong>
-          </div>
-          <div class="col-md-8">
-              <input type="text" name="teammate1" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="teammate1">
-          </div>
+        <div class="col-md-4">
+            <strong>Host Name:</strong>
+        </div>
+        <div class="col-md-8">
+          <input type="text" name="hostname" class="txt form-control input-lg col-md-6" placeholder="" [(ngModel)]="hostName">
+        </div>
       </div>
       <div class="row">
+        <div class="col-md-4">
+            <strong>Date of Match:</strong>
+        </div>
+        <div class="col-md-8">
+            <input name="matchdate" class="form-control col-md-6" [owlDateTime]="date" [owlDateTimeTrigger]="date" [(ngModel)]="matchDate">
+            <owl-date-time #date></owl-date-time>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+            <strong>Details:</strong>
+        </div>
+        <div class="col-md-8">
+            <textarea type="text" name="details" class="txt input-lg form-control" [(ngModel)]="details"></textarea>
+        </div>
+      </div>  
+      <div class="row">
           <div class="col-md-4">
-            <strong>Teammate 2:</strong>
+            <strong>Team Name:</strong>
           </div>
           <div class="col-md-8">
-              <input type="text" name="teammate2" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="teammate2">
+              <input type="text" name="teamname" class="txt form-control input-lg col-lg-6" placeholder="" [(ngModel)]="teamName">
           </div>
-      </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+              <strong>Teammate 1:</strong>
+            </div>
+            <div class="col-md-8">
+                <input type="text" name="teammate1" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="teammate1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+              <strong>Teammate 2:</strong>
+            </div>
+            <div class="col-md-8">
+                <input type="text" name="teammate2" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="teammate2">
+            </div>
+        </div>
+    </div>
+    <div class="button-container text-center">
+      <a routerLink="/" class="btn btn-primary" (click)="createTournamentClick()">Join</a>
+    </div>
+    </form>
   </div>
-  <div class="button-container text-center">
-    <a routerLink="/" class="btn btn-primary" (click)="createTournamentClick()">Join</a>
-  </div>
-  </form>
