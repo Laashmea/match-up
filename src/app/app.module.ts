@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
 import { ViewComponent } from './view/view.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ViewComponent } from './view/view.component';
     AppComponent,
     HomeComponent,
     CreateComponent,
-    ViewComponent
+    ViewComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

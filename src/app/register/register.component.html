@@ -1,0 +1,32 @@
+<div>
+  <form>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <strong>Team Name:</strong>
+            </div>
+            <div class="col-md-8">
+                <input type="text" name="teamname" class="txt form-control input-lg col-lg-6" placeholder="ex. Team A" [(ngModel)]="teamName">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                <strong>Teammate:</strong>
+              </div>
+              <div class="col-md-8">
+                  <input type="text" name="teammate1" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="teammate1">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                <strong>Teammate:</strong>
+              </div>
+              <div class="col-md-8">
+                  <input type="text" name="teammate2" class="txt form-control input-lg col-sm-6" placeholder="" [(ngModel)]="teammate2">
+              </div>
+          </div>
+      </div>
+      <a routerLink="/" class="btn btn-primary" (click)="addTeamClick()">Join!</a>
+  </form>
+</div>
