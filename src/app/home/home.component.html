@@ -12,45 +12,73 @@
       <h2>Matches</h2>
       <div class="view row card-group">
           <div class="col-4"  *ngFor="let current_match of current_matches">
-              <div class="card">
-                  <div class="card-body">
+              <div class="card shadow">
+                  <div class="card-body top-part red">
                     <h5 class="card-title"> <strong>{{current_match.title}}</strong></h5>
-                    <p class="card-text"><strong>Host: </strong>{{ current_match.host }}</p>
-                    <p class="card-text"><strong>Teams: </strong>{{ current_match.teams }}</p>
-                    <p class="card-text"><strong>Date: </strong>{{ current_match.date }}</p>
-                    <p class="card-text"><strong>Details: </strong>{{ current_match.details }}</p>
-                    <div class="button-container">
-                      <button class="btn btn-primary" (click)="viewTournamentClick()">View</button>
-                    </div>
+                  </div>
+              
+              <div class="card-body">
+                  <p class="card-text"><strong>Host: </strong>{{ current_match.host }}</p>
+                  <p class="card-text"><strong>Teams: </strong>{{ current_match.teams }}</p>
+                  <p class="card-text"><strong>Date: </strong>{{ current_match.date }}</p>
+                  <p class="card-text"><strong>Details: </strong>{{ current_match.details }}</p>
+                  <div class="button-container">
+                    <button class="btn btn-primary red home-button shadow" (click)="viewTournamentClick()">View</button>
                   </div>
               </div>
+              </div>              
           </div>
       </div>
       </div>
       </div>
       <div class="join-match">
       <div class="container-fluid">
-      <h2 id="matches">Join a Tournament</h2>
+      <h2 id="matches">Register</h2>
       <div class="join row card-group">
           <div class="col-4"  *ngFor="let avail_match of avail_matches">
-              <div class="card">
-                  <div class="card-body">
+              <div class="card shadow">
+                  <div class="card-body top-part blue">
                       <h5 class="card-title"> <strong>{{avail_match.title}}</strong></h5>
+                
+                  </div>
+                  <div class = "card-body">
                       <p class="card-text"><strong>Host: </strong>{{ avail_match.host }}</p>
                       <p class="card-text"><strong>Teams: </strong>{{ avail_match.teams }}</p>
                       <p class="card-text"><strong>Date: </strong>{{ avail_match.date }}</p>
                       <p class="card-text"><strong>Details: </strong>{{ avail_match.details }}</p>
-                    <a href="#" class="btn btn-primary">Join</a>
-                  </div>
+                    <a href="#" class="btn btn-primary blue home-button shadow">Join</a>
+                  </div> 
+                  
               </div>
           </div>
       </div>
     </div>
-    <div class="container-fluid">
-        <h2 id="matches">Create New Tournament</h2>
-        <div class="button-container text-center">
-          <button class="btn btn-primary" (click)="createTournamentClick()">Create!</button>
+    <div class="container-fluid box full">
+        <h2 id="matches">Create</h2>
+        <div class="card shadow ">
+            <div class="card-body ">
+                <div class="container full">
+                    <div class="row full">
+                      <div class="col  full green">
+                       <ol>
+                         <li> Enter match details</li>
+                         <li> Register your team</li>
+                         <li> Train your team!</li>
+                       </ol>
+                      </div>
+                      <div class="col full half">
+                          <div class="button-container text-center">
+                              <button class="btn btn-primary shadow create-btn" (click)="createTournamentClick()">Create!</button>
+                            </div>
+                      </div>
+                    </div>
+              
+                
+            </div>
+           
+            
         </div>
+        
       </div>
   </div>
 </div>
