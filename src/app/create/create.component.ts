@@ -14,6 +14,10 @@ export class CreateComponent implements OnInit {
   hostName: string;
   matchDate: string;
   details: string;
+  teams: string [];
+  teamName: string;
+  teammate1: string;
+  teammate2: string;
 
   constructor(private router: Router, private _data: DataService) { }    
 
@@ -25,7 +29,7 @@ export class CreateComponent implements OnInit {
     var new_match = {
       title: this.matchName,
       host: this.hostName,
-      teams: [],
+      teams: [ this.teamName ],
       date: this.matchDate,
       details: this.details
     }
