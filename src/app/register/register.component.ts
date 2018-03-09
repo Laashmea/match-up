@@ -26,9 +26,8 @@ export class RegisterComponent implements OnInit {
   }
 
   addTeamClick() {
-    this.teams = [this.teammate1, this.teammate2];
     var match = this.avail_matches[this.idx];
-    match["teams"] = this.teams;
+    match["teams"].push(this.teamName);
     this.avail_matches.splice(this.idx, 1);
     this.avail_matches.push(match);
     this._data.changeAvailMatch(this.avail_matches);
