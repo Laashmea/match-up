@@ -11,7 +11,7 @@
     <div class="container-fluid">
       <h2>Matches</h2>
       <div class="view row card-group">
-          <div class="col-4"  *ngFor="let current_match of current_matches">
+          <div class="col-4" *ngFor="let avail_match of avail_matches; let i = index">
               <div class="card shadow">
                   <div class="card-body top-part red">
                     <h5 class="card-title"> <strong>{{current_match.title}}</strong></h5>
@@ -46,7 +46,7 @@
                       <p class="card-text"><strong>Teams: </strong>{{ avail_match.teams }}</p>
                       <p class="card-text"><strong>Date: </strong>{{ avail_match.date }}</p>
                       <p class="card-text"><strong>Details: </strong>{{ avail_match.details }}</p>
-                    <a href="#" class="btn btn-primary blue home-button shadow">Join</a>
+                      <button class="btn btn-primary blue home-button shadow" (click)=registerClick(i)>Join</button>
                   </div> 
                   
               </div>

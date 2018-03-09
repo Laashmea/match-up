@@ -21,7 +21,9 @@ export class HomeComponent implements OnInit {
     this._data.changeAvailMatch(this.avail_matches);
   }
   
-
+  registerClick(i) {
+    this.router.navigate(['register', i])
+  }
 
   createTournamentClick() {
     this.router.navigate(['create']);
