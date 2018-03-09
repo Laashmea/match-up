@@ -19,7 +19,7 @@ const routes: Routes = [
     component: CreateComponent
   },
   {
-    path: 'register',
+    path: 'register/:match',
     component: RegisterComponent
   }
 ];

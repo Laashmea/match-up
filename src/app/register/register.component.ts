@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,17 +15,22 @@ export class RegisterComponent implements OnInit {
   teammate1: string;
   teammate2: string;
   avail_matches: any;
+  idx: number;
 
-  constructor(private router: Router, private _data: DataService) { }
+  constructor(private router: Router, private _data: DataService, private route: ActivatedRoute) {
+    this.route.params.subscribe(res => this.idx = res.match);
+   }
 
   ngOnInit() {
     this._data.avail_match.subscribe(res => this.avail_matches = res);
   }
 
   addTeamClick() {
-    var new_match = this.avail_matches[0];
-    new_match["teams"] = this.teams;
-    this.avail_matches.push(new_match);
+    this.teams = [this.teammate1, this.teammate2];
+    var match = this.avail_matches[this.idx];
+    match["teams"] = this.teams;
+    this.avail_matches.splice(this.idx, 1);
+    this.avail_matches.push(match);
     this._data.changeAvailMatch(this.avail_matches);
     this.router.navigate[''];
   }
