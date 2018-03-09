@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
+// import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { FormsModule } from '@angular/forms';
 
 import { DataService } from './data.service';
@@ -22,8 +24,11 @@ import { ViewComponent } from './view/view.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
-    DlDateTimePickerDateModule
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule
+    // DlDateTimePickerDateModule
   ],
   providers: [FormsModule, DataService],
   bootstrap: [AppComponent]

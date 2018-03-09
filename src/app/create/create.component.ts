@@ -9,19 +9,30 @@ import { Router } from '@angular/router';
 })
 export class CreateComponent implements OnInit {
 
-  tournaments: any;
-  tournText: string = "test";
+  avail_matches: any;
+  matchName: string;
+  hostName: string;
+  matchDate: string;
+  details: string;
 
   constructor(private router: Router, private _data: DataService) { }    
 
   ngOnInit() {
-    this._data.tournament.subscribe(res => this.tournaments = res);
+    this._data.avail_match.subscribe(res => this.avail_matches = res);
   }
 
-  createTournament() {
-    this.tournaments.push(this.tournText);
-    this.tournText = '';
-    this._data.changeGoal(this.tournaments);
+  createTournamentClick() {
+    var new_match = {
+      title: this.matchName,
+      host: this.hostName,
+      teams: [],
+      date: this.matchDate,
+      details: this.details
+    }
+    
+    this.matchName = '';
+    this.avail_matches.push(new_match);
+    this._data.changeAvailMatch(this.avail_matches);
     this.router.navigate(['']);
   }
 }
